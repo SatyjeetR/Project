@@ -1,0 +1,211 @@
+<div class=" row">
+    <div style="height: 100vw; width: 20%;  margin-left: 0;
+    margin-top: 0; background-color: bisque; text-align: center;">
+        <div class="logo-wrap">
+            <img src="../assets/img/logo.svg" alt="">
+        </div>
+
+
+
+        <div style="width: inherit;">
+            <!-- <li class="list-item">
+                <span class="group-title">MEDICINE</span>
+            </li> -->
+
+
+            <ul *ngFor="let dt of data">
+
+                <li class="list-item">
+                    <span class="group-title" [ngClass]="dt.headCSS">{{dt.title}}</span>
+                </li>
+
+
+
+                <li class="list-item" *ngFor="let dt of dt.heading1">
+                    <div><a [routerLink]=dt.RouterLink>{{dt.lable}}</a></div>
+                </li>
+            </ul>
+
+
+
+            <!-- <ul class="main-ul">
+                <li class="list-item">
+                    <div><a routerLink="">Dashboard</a></div>
+                </li>
+                <li class="list-item">
+                    <div><a routerLink="Appointments">Appointments</a></div>
+
+                </li>
+                <li class="list-item">
+                    <div><a routerLink="Doctors">Doctors</a></div>
+
+                </li>
+                <li class="list-item">
+                    <div><a routerLink="Departments">Departments</a></div>
+
+
+                </li>
+                <li class="list-item">
+                    <div><a routerLink="Patients">Patients</a></div>
+                </li>
+                <li class="list-item">
+                    <div><a routerLink="Payments">Payments</a></div>
+                </li>
+
+
+
+                <!-- UI KIT   -->
+            <li class="list-item">
+                <div>
+                    <span class="group-title">UIKIT</span>
+                </div>
+            </li>
+
+
+            <li class="list-item">
+                <span class="">Components</span>
+
+            </li>
+            <li class="list-item">
+                <span class="list-item">Icons
+                </span>
+            </li>
+            <li class="list-item">
+                <span class="list-item">Typography
+                </span>
+            </li>
+            <li class="list-item">
+                <!-- <a href="">ssgs</a> -->
+                <span class="list-item">Tables
+
+                </span>
+            </li>
+            <li class="list-item">
+                <span class="list-item">Forms
+
+                </span>
+            </li>
+            <li class="list-item">
+                <span class="list-item">Charts
+
+                </span>
+            </li>
+            <li class="list-item">
+                <span class="list-item">Maps
+
+                </span>
+            </li>
+
+
+            <!-- apps  -->
+            <li class="list-item">
+                <div>
+                    <span class="group-title">APPS</span>
+                </div>
+            </li>
+
+
+            <!-- <li class="list-item">
+                    <span class="">Service pages
+                    </span>
+
+                </li> -->
+
+            <div>
+
+                <div (click)="ShowSer()">
+
+                    Service pages
+
+                </div>
+
+                <ul *ngIf="ShowServiceList">
+                    <li (click)="HideSer()">1</li>
+                    <li (click)="HideSer()">2</li>
+                </ul>
+
+
+            </div>
+
+
+            <li class="list-item" (click)="ShowSession()">
+                <span class="list-item">Sessions
+
+                </span>
+            </li>
+
+
+
+            <!-- </ul>  -->
+        </div>
+
+
+
+        <!-- add pAtient btn  -->
+        <!-- <div class="add-patient"> -->
+        <!-- <button class="btn btn-primary "> -->
+        <!-- <p-button label="Submit" icon="pi pi-check"></p-button> -->
+        <!-- <p-button label="Submit" icon="pi pi-check"></p-button> -->
+        <!-- <span>
+                    <i class="pi pi-plus" style="font-size: 1rem"></i>
+
+                </span>
+
+                <span class="list-item">Add Patient</span> -->
+        <!-- </button> -->
+        <!-- </div> -->
+
+
+
+        <!-- setting FAQ & Support  -->
+        <div class=" group-title" style="text-align: left; padding-left: 25px;">
+            <div>
+                <span class="">
+                    <i class="pi pi-cog" style="font-size: 1rem"></i>
+                    <a href="#/vertical/settings"> Settings</a>
+                </span>
+            </div>
+
+            <div>
+                <span class="">
+                    <i class="pi pi-question-circle" style="font-size: 1rem"></i>
+                    <a href="#/vertical/default-dashboard"> FAQ & Support</a>
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <div style="height: 100%; width: 80%; ">
+
+        <div class="container" style="background-color: aqua; height: 150px; margin-top: 0%;">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <span class="p-input-icon-right">
+                        <input type="text" pInputText [(ngModel)]="value" placeholder="Type Page's Title" />
+
+                        <i class="pi pi-search"></i>
+
+                    </span>
+                </div>
+                <div class="col-lg-8">
+                    <p-avatar label="U" pBadge styleClass="mr-5" value="4" size="large"
+                        [style]="{ 'background-color': '#4caf4f', color: '#ffffff' }"></p-avatar>
+                </div>
+            </div>
+
+
+        </div>
+
+        <router-outlet></router-outlet>
+    </div>
+
+
+</div>

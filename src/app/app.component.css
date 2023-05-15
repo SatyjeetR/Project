@@ -1,0 +1,52 @@
+.logo-wrap {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    /* height: 100%; */
+    padding: 0.7142857143rem 2.8571428571rem;
+    text-decoration: none;
+}
+
+.group-title {
+    color: currentColor;
+    display: block;
+    opacity: .3;
+    padding: 2.1428571429rem 0.3571428571rem 0.7142857143rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.main-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1.142857rem 1.4285714286rem 0;
+}
+
+.list-item a {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0 1.0714285714rem;
+    position: relative;
+    margin: 20px 0;
+    /* color: aliceblue; */
+
+}
+
+.add-patient {
+    flex-grow: 1;
+    height: 100%;
+    margin: 0 0.7142857143rem;
+    padding: 1.4285714286rem 2.8571428571rem;
+}
+
+.assistant-menu {
+    display: block;
+    margin: 0 0.7142857143rem rem;
+    padding: 0 2.8571428571rem 1.4285714286rem;
+}
+
+a{
+    margin: 20px 0;
+
+    text-decoration: none;
+}

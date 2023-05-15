@@ -1,0 +1,9 @@
+.dept{
+    background-color: rgb(111, 105, 125);    
+     /* height: 100%; */
+overflow-x: hidden;
+overflow-y: auto;
+margin-bottom: 4.2857142857rem;
+position: relative;
+ transition: .2s padding 0s ease-in-out;
+}
