@@ -34,7 +34,7 @@
 
 .add-patient {
     flex-grow: 1;
-    height: 100%;
+    /* height: 100%; */
     margin: 0 0.7142857143rem;
     padding: 1.4285714286rem 2.8571428571rem;
 }
@@ -45,8 +45,38 @@
     padding: 0 2.8571428571rem 1.4285714286rem;
 }
 
-a{
+a {
     margin: 20px 0;
 
     text-decoration: none;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    margin: 20px;
+
+}
+
+footer {
+    background-color: aqua;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 19.5%;
+    z-index: 11100;
+
+}
+
+.extra{
+    margin-top: 80px;
+    /* z-index: -1; */
+    margin-bottom: 75px;
+
 }

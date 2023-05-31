@@ -1,5 +1,57 @@
-<div class="" style="background-color: rgb(224, 183, 162);">
-    <h1>Patients Coponent</h1>
-
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis molestiae facere repellendus quasi ipsa ut illum vel autem necessitatibus a corporis obcaecati harum voluptatem, hic dolorum expedita, quam nulla ad. Esse quos ratione harum vero ipsam, modi ipsum, natus consectetur quibusdam dignissimos nobis reprehenderit a obcaecati dolore porro voluptatibus.
-    </div>
+<div class="card container">
+    <p-table [value]="Patients" [paginator]="true" [rows]="8" [showCurrentPageReport]="true"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[7, 8, 10]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:8%">Photo </th>
+                <th style="width:8%">Name</th>
+                <th style="width:8%">Id</th>
+                <th style="width:8%">Age</th>
+                <th style="width:15%">Address</th>
+                <th style="width:8%">Number</th>
+                <th style="width:8%">Last Visit</th>
+                <th style="width:8%">Status</th>
+                <th style="width:13%">Action</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-Patients>
+            <tr>
+                <td><img [src]="Patients.Photo" alt=""></td>
+                <td>{{ Patients.Name}}</td>
+                <td>{{Patients.ID }}</td>
+                <td>{{ Patients.Age}}</td>
+                <td>{{ Patients.Adderss}}</td>
+                <td>{{ Patients.Number}}</td>
+                <td>{{ Patients.LastVisit}}</td>
+                <td>{{ Patients.Status}}</td>
+                <td>
+                    <div>
+                        <button type="button" class="btn btn-dark ">
+                            <span>
+                                <i class="pi pi-external-link" style="font-size: 1rem"></i>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-info ">
+                            <span>
+                                <i class="pi pi-user-edit" style="font-size: 1rem"></i>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-primary" (click)="OnDelet(Patients)">
+                            <span>
+                                <i class="pi pi-trash" style="font-size: 1rem"></i>
+                            </span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+        </ng-template>
+    </p-table>
+</div>

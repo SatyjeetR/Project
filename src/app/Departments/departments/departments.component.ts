@@ -6,17 +6,57 @@ import { Component } from '@angular/core';
   styleUrls: ['./departments.component.css']
 })
 export class DepartmentsComponent {
-  cities: any=[];
 
-  selectedCity:any ;
+  public data: any = [
 
-  ngOnInit() {
-      this.cities = [
-          { name: 'New York', code: 'NY' },
-          { name: 'Rome', code: 'RM' },
-          { name: 'London', code: 'LDN' },
-          { name: 'Istanbul', code: 'IST' },
-          { name: 'Paris', code: 'PRS' }
-      ];
-  }
+
+    {
+      "ImgLink":"../../../assets/Content/department-1.jpg",
+      "heading": "Cardiology",
+      
+      
+    },
+    {
+      "ImgLink":"../../../assets/Content/department-2.jpg",
+      "heading": "Dr. Liam",
+      
+      
+    },
+    {
+      "ImgLink":"../../../assets/Content/department-3.jpg",
+      "heading": "Dr. Noah",
+    },
+    {
+      "ImgLink":"../../../assets/Content/department-4.jpg",
+      "heading": "Dr. Emma",
+     
+    },
+    {
+      "ImgLink":"../../../assets/Content/department-5.jpg",
+      "heading": "Dr. James",
+      
+    },
+    {
+      "ImgLink":"../../../assets/Content/department-6.jpg",
+      "heading": "Dr. Olivia",
+     
+    },
+    {
+      "ImgLink":"../../../assets/Content/department-7.jpg",
+      "heading": "Dr. Logan",
+   
+    },
+    {
+      "ImgLink":"../../../assets/Content/department-8.jpg",
+      "heading": "Dr. Benjamin",
+     
+    },
+    {
+      "ImgLink":"../../../assets/Content/department-9.jpg",
+      "heading": "Dr. Mason",
+    
+    },
+  ]
+
+
 }

@@ -1,5 +1,37 @@
-<div class="" style="background-color: rgb(255, 85, 1);">
-    <h1>Doctors Coponent</h1>
+<div class="row">
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis molestiae facere repellendus quasi ipsa ut illum vel autem necessitatibus a corporis obcaecati harum voluptatem, hic dolorum expedita, quam nulla ad. Esse quos ratione harum vero ipsam, modi ipsum, natus consectetur quibusdam dignissimos nobis reprehenderit a obcaecati dolore porro voluptatibus.
+    <div class="container">
+        <h2 style="" class="page-title">Appointments</h2>
     </div>
+    <div class="container">
+
+        <div class="row">
+            <div *ngFor="let dt of data" style="display: inline-block;" class="col-lg-4">
+
+
+                <p-card [header]="dt.heading" [subheader]="dt.subheader" [style]="{ width: '360px' }"
+                    class="mb-5">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" [src]="dt.ImgLink" />
+                    </ng-template>
+
+                    <div class=" icon text-center" style="font-weight: 700;">
+                        <i class=" pi pi-instagram"></i>
+                        <i class=" pi pi-facebook"></i>
+                        <i class=" pi pi-twitter"></i>
+                    </div>
+                    <p>{{dt.para}}</p>
+                   
+                    <div class="text-center">
+                        <p-button label="View profile" icon="pi pi-profile" class="text-center" routerLink="Profile"></p-button>
+                    </div>
+                       
+                   
+                </p-card>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

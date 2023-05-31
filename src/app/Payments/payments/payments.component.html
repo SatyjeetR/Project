@@ -1,5 +1,41 @@
-<div class="" style="background-color: rgb(255, 85, 1);">
-    <h1>Payments Coponent</h1>
+<div class="card container">
+    <p-table [value]="Payments" [paginator]="true" [rows]="5" [showCurrentPageReport]="true"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[5, 8, 9]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:12%">Bill NO </th>
+                <th style="width:12%">Patient</th>
+                <th style="width:12%">Doctor</th>
+                <th style="width:12%">Date</th>
+                <th style="width:12%">Charges </th>
+                <th style="width:12%">Tax</th>
+                <th style="width:12%">Discount</th>
+                <th style="width:12%">Total</th>
+               
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-Payments>
+            <tr>
+              
+                <td>{{ Payments.BillNo}}</td>
+                <td>{{Payments.Patient}}</td>
+                <td>{{ Payments.Doctor}}</td>
+                <td>{{ Payments.Date}}</td>
+                <td>{{ Payments.Charges}}</td>
+                <td>{{ Payments.Tax}}</td>
+                <td>{{ Payments.Discount}}</td>
+                <td>{{ Payments.Total}}</td>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis molestiae facere repellendus quasi ipsa ut illum vel autem necessitatibus a corporis obcaecati harum voluptatem, hic dolorum expedita, quam nulla ad. Esse quos ratione harum vero ipsam, modi ipsum, natus consectetur quibusdam dignissimos nobis reprehenderit a obcaecati dolore porro voluptatibus.
-    </div>
+            
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+        </ng-template>
+    </p-table>
+</div>
