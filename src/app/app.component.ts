@@ -18,7 +18,7 @@ export class AppComponent {
 
   // public ShowSer:boolean= false;
   public ShowServiceList: boolean = false;
-  // public ShowSessionsList: boolean = false;
+  public ShowSessionsList: boolean = false;
 
 
 
@@ -32,14 +32,15 @@ export class AppComponent {
   public data: any = [
     {
       title: "Medicine",
-   
+      headCSS:"group-title",
       heading1: [
-
         { lable: "DashBoard", RouterLink: "" },
         { lable: "Appointments", RouterLink: "Appointments" },
         { lable: "Doctors", RouterLink: "Doctors" },
+        { lable: "Departments", RouterLink: "Departments" },
+        { lable: "Patients", RouterLink: "Patients" },
+        { lable: "Payments", RouterLink: "Payments" },
       ],
-
     },
     {
       title: "UIKIT",
@@ -47,12 +48,26 @@ export class AppComponent {
       
       heading1: [
 
-        { lable: "Components", RouterLink: "" },
-        { lable: "Icons", RouterLink: "" },
-        { lable: "Typography", RouterLink: "" },
+        { lable: "Components", RouterLink: "Components" },
+        { lable: "Icons", RouterLink: "Icons" },
+        { lable: "Typography", RouterLink: "Typography" },
+        { lable: "Tables", RouterLink: "Tables" },
+        { lable: "Forms", RouterLink: "Forms" },
+        { lable: "Charts", RouterLink: "Charts" },
+        { lable: "Maps", RouterLink: "Maps" },
       ],
-
     },
+    // {
+    //   title: "APPS",
+    //   headCSS:"group-title",
+      
+    //   heading1: [
+
+    //     { lable: "Service_pages", RouterLink: "Service pages" },
+    //     { lable: "Sessions", RouterLink: "Sessions" },
+    //   ],
+
+    // },
 
 
   ]
@@ -61,30 +76,29 @@ export class AppComponent {
 
 
   ShowSer() {
+    this.ShowSessionsList = false;
     this.ShowServiceList = true;
   }
 
   HideSer() {
+
     this.ShowServiceList = false;
 
   }
+
+
 
 
 
   ShowSession() {
     this.ShowServiceList = false;
-
+    this.ShowSessionsList = true;
 
   }
+  HideSessions() {
 
-  // ShowSession() {
-  //   this.ShowSessionsList = true;
-
-  // }
-  // HideSessions() {
-
-  //   this.ShowSessionsList = false;
-  // }
+    this.ShowSessionsList = false;
+  }
 
 
 

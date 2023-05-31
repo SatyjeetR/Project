@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { PaymentsComponent } from '../payments/payments.component';
 import { RouterModule, Routes } from '@angular/router';
 
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+
 const routs:Routes=[
   {path:'',component:PaymentsComponent}
 ]
@@ -13,6 +16,8 @@ const routs:Routes=[
   ],
   imports: [
     CommonModule,
+    TableModule,
+    ButtonModule,
     [RouterModule.forChild(routs)]
   ]
 })

@@ -9,13 +9,17 @@ import { ChartModule } from 'primeng/chart';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { AvatarModule } from 'primeng/avatar';
-
+import { BadgeModule } from 'primeng/badge';
+import { DoctorProfileComponent } from './Doctors/doctor-profile/doctor-profile.component';
+import { DeptMoreComponent } from './Departments/dept-more/dept-more.component';
+import { TestPipe } from './test.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-
-
+    DoctorProfileComponent,
+    DeptMoreComponent,
+    TestPipe,
 
   ],
   imports: [
@@ -26,7 +30,8 @@ import { AvatarModule } from 'primeng/avatar';
     ChartModule,
     BrowserAnimationsModule,
     InputTextModule,
-    AvatarModule
+    AvatarModule,
+    BadgeModule
 
   ],
   providers: [],

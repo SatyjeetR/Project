@@ -1,0 +1,108 @@
+<div class="row">
+    <div class="col-lg-12 heading">
+        <h1>Doctor profile page</h1>
+    </div>
+
+
+
+    <div class="col-lg-6">
+        <form (ngSubmit)="OnsaveData(frm)" #frm="ngForm">
+            <div class="form-group mt-3">
+                <h5>Photo</h5>
+                <div class="d-flex align-items-center">
+                    <p-avatar image="" src="" size="xlarge" shape="circle" width="140" height="140">
+                        <img src="assets/Content/doctor-400-1.jpg" width="100" height="100" alt=""></p-avatar>
+                    <button type="button" class="btn btn-info ">Change Photo</button>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label for="FirstName">First Name</label>
+                <input type="text" name="FirstName" ngModel class="form-control">
+            </div>
+            <div class="form-group mt-3">
+                <label for="LastName">Last Name</label>
+                <input type="text" name="LastName" ngModel class="form-control">
+            </div>
+            <div class="form-group mt-3">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="Speciality">Speciality</label>
+                        <input type="text" name="Speciality" ngModel class="form-control">
+                    </div>
+                    <div class="col-6 ">
+                        <label for="Gender">Gender</label>
+                        <select name="Gender" id="" class="form-control" ngModel>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label for="Address">Address</label>
+                <input type="text" name="Address" id=""
+                    placeholder="795 Folsom Ave, Suite 600 San Francisco, CADGE 94107" class="form-control" ngModel>
+            </div>
+            <div class="form-group mt-3">
+                <div class="row mt-5">
+
+
+                    <label for="network">Social Network</label>
+                    <div class="col-6 mt-3">
+                        <input type="text" name="network" ngModel class="form-control " placeholder="insta" ngModel>
+                    </div>
+                    <div class="col-6  mt-3">
+                        <input type="text" name="LastName" ngModel class="form-control" placeholder="#">
+                    </div>
+
+
+
+                    <div class="col-6 mt-3">
+                        <input type="text" name="LastName" ngModel class="form-control" placeholder="Twitter">
+                    </div>
+                    <div class="col-6 mt-3">
+                        <input type="text" name="LastName" ngModel class="form-control" placeholder="#">
+                    </div>
+
+
+                    <div class="col-6 mt-3">
+                        <input type="text" name="LastName" ngModel class="form-control" placeholder="FaceBook">
+                    </div>
+                    <div class="col-6 mt-3">
+                        <input type="text" name="LastName" ngModel class="form-control" placeholder="#">
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <div class="row mt-5">
+                        <label for="network">Add social Network</label>
+                        <div class="col-6 mt-3">
+                            <input type="text" name="network" ngModel class="form-control" placeholder="icon class">
+                        </div>
+                        <div class="col-6 mt-3">
+                            <input type="text" name="LastName" ngModel class="form-control" placeholder="link">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <button class="btn btn-primary form-control">Save Changes</button>
+                </div>
+            </div>
+        </form>
+        
+        
+        
+    </div>
+    
+    
+    
+    
+</div>
+<div class="container mt-5">
+
+    <h1>Patients 2018</h1>
+
+    <div class="card">
+        <p-chart type="line" [data]="data" [options]="options"></p-chart>
+    </div>
+
+</div>

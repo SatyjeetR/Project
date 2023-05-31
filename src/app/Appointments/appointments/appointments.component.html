@@ -1,4 +1,62 @@
-<div class="" style="background-color: rgb(201, 199, 42);">
-    <h1>Appoinments Coponent</h1>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis molestiae facere repellendus quasi ipsa ut illum vel autem necessitatibus a corporis obcaecati harum voluptatem, hic dolorum expedita, quam nulla ad. Esse quos ratione harum vero ipsam, modi ipsum, natus consectetur quibusdam dignissimos nobis reprehenderit a obcaecati dolore porro voluptatibus.
-    </div>
+<h2 class="mb-5 page-title">Appointments</h2>
+<div class="card-container">
+
+
+
+    <p-table [value]="Appoinments" [paginator]="true" [rows]="7" [showCurrentPageReport]="true"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[7, 8, 9]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:7%">Photo </th>
+                <th style="width:7%">Name</th>
+                <th style="width:9%">Email</th>
+                <th style="width:9%">Date</th>
+                <th style="width:9%">Visit Time</th>
+                <th style="width:9%">Number</th>
+                <th style="width:9%">Doctor</th>
+                <th style="width:9%">Injury</th>
+                <th style="width:12%">Action</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-Appoinments>
+            <tr>
+                <td><img [src]="Appoinments.Photo" alt=""></td>
+                <td>{{ Appoinments.Name}}</td>
+                <td>{{Appoinments.Email}}</td>
+                <td>{{ Appoinments.Date}}</td>
+                <td>{{ Appoinments.VisitTime}}</td>
+                <td>{{ Appoinments.Number}}</td>
+                <td>{{ Appoinments.Doctor}}</td>
+                <td>{{ Appoinments.Injury}}</td>
+
+                <td>
+                    <div>
+                        <button type="button" class="btn btn-dark ">
+                            <span>
+                                <i class="pi pi-external-link" style="font-size: 1rem"></i>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-info ">
+                            <span>
+                                <i class="pi pi-user-edit" style="font-size: 1rem"></i>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-primary" (click)="OnDelet(Appoinments)">
+                            <span>
+                                <i class="pi pi-trash" style="font-size: 1rem"></i>
+                            </span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+        </ng-template>
+    </p-table>
+</div>
